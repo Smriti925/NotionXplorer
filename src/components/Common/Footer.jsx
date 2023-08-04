@@ -23,14 +23,14 @@ const Community = ["Forums", "Chapters", "Events"]
 
 const Footer = () => {
   return (
-    <div className="bg-grey-200">
+    <div className="bg-black">
       <div className="relative mx-auto flex w-11/12 max-w-maxContent items-center justify-between gap-8 py-14 leading-6 text-richblack-500 lg:flex-row">
         <div className="flex w-[100%] flex-col border-b border-richblack-700 pb-5 lg:flex-row">
           {/* Section 1 */}
           <div className="flex flex-row flex-wrap justify-between gap-3 pl-3 lg:w-[50%] lg:border-r lg:border-richblack-700 lg:pr-5">
             <div className="mb-7 flex w-[30%] flex-col gap-3 lg:w-[30%] lg:pl-0">
               {/* <img src={Logo} alt="" className="object-contain" /> */}
-              <h1 className="text-[16px] font-semibold text-richblack-600">
+              <h1 className="text-[16px] font-semibold text-grey-300">
                 Company
               </h1>
               <div className="flex flex-col gap-2">
@@ -38,7 +38,7 @@ const Footer = () => {
                   return (
                     <div
                       key={i}
-                      className="cursor-pointer text-[14px] transition-all duration-200 hover:text-richblack-600"
+                      className="cursor-pointer text-[14px] transition-all duration-200 hover:text-grey-300"
                     >
                       <Link to={ele.toLowerCase()}>{ele}</Link>
                     </div>
@@ -55,7 +55,7 @@ const Footer = () => {
             </div>
 
             <div className="mb-7 w-[48%] lg:w-[30%] lg:pl-0">
-              <h1 className="text-[16px] font-semibold text-richblack-600">
+              <h1 className="text-[16px] font-semibold text-grey-300">
                 Resources
               </h1>
 
@@ -64,7 +64,7 @@ const Footer = () => {
                   return (
                     <div
                       key={index}
-                      className="cursor-pointer text-[14px] transition-all duration-200 hover:text-richblack-600"
+                      className="cursor-pointer text-[14px] transition-all duration-200 hover:text-grey-300"
                     >
                       <Link to={ele.split(" ").join("-").toLowerCase()}>
                         {ele}
@@ -74,25 +74,23 @@ const Footer = () => {
                 })}
               </div>
 
-              <h1 className="mt-7 text-[16px] font-semibold text-richblack-600">
+              <h1 className="mt-7 text-[16px] font-semibold text-grey-300">
                 Support
               </h1>
-              <div className="mt-2 cursor-pointer text-[14px] transition-all duration-200 hover:text-richblack-600">
+              <div className="mt-2 cursor-pointer text-[14px] transition-all duration-200 hover:text-grey-300">
                 <Link to={"/help-center"}>Help Center</Link>
               </div>
             </div>
 
             <div className="mb-7 w-[48%] lg:w-[30%] lg:pl-0">
-              <h1 className="text-[16px] font-semibold text-richblack-600">
-                Plans
-              </h1>
+              <h1 className="text-[16px] font-semibold text-grey-300">Plans</h1>
 
               <div className="mt-2 flex flex-col gap-2">
                 {Plans.map((ele, index) => {
                   return (
                     <div
                       key={index}
-                      className="cursor-pointer text-[14px] transition-all duration-200 hover:text-richblack-600"
+                      className="cursor-pointer text-[14px] transition-all duration-200 hover:text-grey-300"
                     >
                       <Link to={ele.split(" ").join("-").toLowerCase()}>
                         {ele}
@@ -101,7 +99,7 @@ const Footer = () => {
                   )
                 })}
               </div>
-              <h1 className="mt-7 text-[16px] font-semibold text-richblack-600">
+              <h1 className="mt-7 text-[16px] font-semibold text-grey-300">
                 Community
               </h1>
 
@@ -110,7 +108,7 @@ const Footer = () => {
                   return (
                     <div
                       key={index}
-                      className="cursor-pointer text-[14px] transition-all duration-200 hover:text-richblack-600"
+                      className="cursor-pointer text-[14px] transition-all duration-200 hover:text-grey-300"
                     >
                       <Link to={ele.split(" ").join("-").toLowerCase()}>
                         {ele}
@@ -127,7 +125,7 @@ const Footer = () => {
             {FooterLink2.map((ele, i) => {
               return (
                 <div key={i} className="mb-7 w-[48%] lg:w-[30%] lg:pl-0">
-                  <h1 className="text-[16px] font-semibold text-richblack-600">
+                  <h1 className="text-[16px] font-semibold text-grey-300">
                     {ele.title}
                   </h1>
                   <div className="mt-2 flex flex-col gap-2">
@@ -135,7 +133,7 @@ const Footer = () => {
                       return (
                         <div
                           key={index}
-                          className="cursor-pointer text-[14px] transition-all duration-200 hover:text-richblack-600"
+                          className="cursor-pointer text-[14px] transition-all duration-200 hover:text-grey-300"
                         >
                           <Link to={link.link}>{link.title}</Link>
                         </div>
@@ -160,7 +158,7 @@ const Footer = () => {
                   className={` ${
                     BottomFooter.length - 1 === i
                       ? ""
-                      : "cursor-pointer border-r border-richblack-700 transition-all duration-200 hover:text-richblack-600"
+                      : "cursor-pointer border-r border-richblack-700 transition-all duration-200 hover:text-grey-300"
                   } px-3 `}
                 >
                   <Link to={ele.split(" ").join("-").toLocaleLowerCase()}>
@@ -172,7 +170,17 @@ const Footer = () => {
           </div>
 
           <div className="text-center">
-            Made with ❤️ Smriti © 2023 NotionXplorer
+            Made with ❤️ by{" "}
+            <span className="underline">
+              <a
+                href="https://www.linkedin.com/in/smriti-bhatia-92a88a218/"
+                target="_blank"
+                className="pr-5 text-grey-300 hover:text-grey-100"
+              >
+                Smriti{"    "}
+              </a>
+            </span>
+            {"    "}© 2023 NotionXplorer
           </div>
         </div>
       </div>

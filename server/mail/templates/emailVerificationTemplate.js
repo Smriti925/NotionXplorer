@@ -66,9 +66,8 @@ const otpTemplate = (otp) => {
 	
 	<body>
 		<div class="container">
-			<a href="https://NotionXplorer-edtech-project.vercel.app"><img class="logo"
-					src="https://i.ibb.co/7Xyj3PC/logo.png" alt="NotionXplorer Logo"></a>
-			<div class="message">OTP Verification Email</div>
+			
+			<div class="message">OTP Verification Email from NotionXplorer</div>
 			<div class="body">
 				<p>Dear User,</p>
 				<p>Thank you for registering with NotionXplorer. To complete your registration, please use the following OTP
